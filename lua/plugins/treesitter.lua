@@ -5,16 +5,18 @@ return {
       'JoosepAlviste/nvim-ts-context-commentstring',
     },
 		version = false,
-		build = ":TSupdate",
+		build = ":TSUpdate",
 		event = "bufreadpost",
 		keys = {
 			{ "<s-space>", desc = "increment selection" },
 			{ "<bs>", desc = "schrink selection", mode = "x" },
 		},
 		opts = {
-			autotag = { enable = true },
-			highlight = { enable = true, additional_vim_regex_highlighting = true, use_languagetree = true },
-			context_commentstring = { enable = true, enable_autocmd = false },
+      autotag = { enable = true },
+      highlight = { enable = true, additional_vim_regex_highlighting = true, use_languagetree = true },
+      indent = {
+        enable = false,
+      },
 			ensure_installed = {
 				"bash",
 				"c",
